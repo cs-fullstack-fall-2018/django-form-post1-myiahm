@@ -1,0 +1,20 @@
+{% extends 'VideoGameApp/base.html' %}
+
+{% block content %}
+
+<h1><em>Game Data</em></h1>
+
+{% if game %}
+
+<ul>
+    {% for VideoGame in game %}
+    <li><h3>{{ VideoGame.name }}</h3></li>
+    <li><h2>{{ VideoGame.genre }}</h2></li>
+    <hr/>
+
+    {% endfor %}
+</ul>
+{% else %}
+<p>No games are available.</p>
+{% endif %}
+{% endblock %}
